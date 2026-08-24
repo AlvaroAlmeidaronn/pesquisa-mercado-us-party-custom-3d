@@ -1,0 +1,16 @@
+# Local kit / agent state
+.cursor/
+
+# Test run logs (regenerate via scripts)
+tests/artifacts/
+
+# OS / editor
+.DS_Store
+*.swp
+*~
+
+# Secrets (never commit)
+.env
+.env.*
+credentials/
+**/token.json
