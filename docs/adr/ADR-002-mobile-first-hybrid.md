@@ -1,6 +1,6 @@
 # ADR: Mobile-first vs híbrido na landing
 
-- Status: proposed
+- Status: accepted
 - Data: 2026-08-24
 
 ### Para o Álvaro (gestor)
@@ -8,10 +8,10 @@
 - Resultado vs objetivo: **não bate com “mobile-first puro”** — está **híbrido** (base + `min-width` para crescer grids + um bloco `max-width: 767px` para exceções de telefone)
 - Os 3 selos: Entrega (ship deste ADR = docs/comentário) · Fecho (`FECHO_OK` não — Goals MISSING) · Mundo real (`PROD_IO_AUTH: nao`)
 - Residual / risco: sem Goals confirmed; sem eye-test em device físico; espelho `landing/` ↔ `docs/`
-- O que preciso de ti: **decidir X** — Q1 abaixo
-- Perguntas sim/não:
-  - Q1: Aceitas manter o híbrido (sem rewrite “mobile-first puro”) enquanto o telefone continuar usável? (**proposto: sim**)
-  - Q2: Queres Goals de funil mobile confirmados agora? (**proposto: não neste ship**)
+- O que preciso de ti: nada (decisão gravada)
+- Respostas gravadas:
+  - Q1: Aceitas manter o híbrido (sem rewrite “mobile-first puro”) enquanto o telefone continuar usável? → **sim** (Álvaro, 2026-08-24)
+  - Q2: Queres Goals de funil mobile confirmados agora? → **não neste ship** (proposta mantida; sem pedido contrário)
 
 ## Contexto
 Contagem em `landing/styles.css`: ~12 `@media (min-width: …)` e **1** `@media (max-width: 767px)` com patches de conversão (badge, WA curto, offset da barra, tap 44px). A `mobile-bar` já é MF (visível na base, escondida ≥768). Chamar isso de “mobile-first” seria marketing interno falso.
