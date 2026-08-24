@@ -1,5 +1,11 @@
 /* ==========================================================================
    Pet Likeness — Studio & Atelier Design System (Anti-Slop Senior UI/UX)
+   ==========================================================================
+   Responsive strategy (ADR-002): HYBRID — not pure mobile-first.
+   - Progressive enhancement via @media (min-width: …) for grids/layout.
+   - Phone exceptions live in @media (max-width: 767px) (bar clearance, WA label…).
+   - .mobile-bar is mobile-first (visible by default; hidden from 768px up).
+   Do not rewrite the whole sheet “for mobile-first purity” without a Goals KPI.
    ========================================================================== */
 
 /* Palettes — toggle via <html data-palette="…">
