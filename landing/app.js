@@ -5,8 +5,8 @@
 (function () {
   "use strict";
 
-  // TODO: Replace with your actual WhatsApp business digits (country code + number, no symbols)
-  const WHATSAPP_NUMBER = "15551234567";
+  // US business line: +1 (781) 462-5669 → wa.me digits only
+  const WHATSAPP_NUMBER = "17814625669";
 
   const WA_MESSAGE = [
     "Hi! I’d like a custom pet figurine handcrafted from my photo.",
