@@ -59,8 +59,8 @@ check "min-height 44px" grep -qF -e "min-height: 44px" -- "$css"
 check "highlights wrap" grep -qF -e "flex-wrap: wrap" -- "$css"
 check "ADR hybrid comment" grep -qF -e "HYBRID — not pure mobile-first" -- "$css"
 
-minc=$(grep -c '@media (min-width' -- "$css" || true)
-maxc=$(grep -c '@media (max-width: 767px)' -- "$css" || true)
+minc=$(grep -cE '^@media \(min-width' -- "$css" || true)
+maxc=$(grep -cE '^@media \(max-width: 767px\)' -- "$css" || true)
 if [ "$minc" -ge 8 ] && [ "$maxc" -eq 1 ]; then
   echo "PASS hybrid media shape (min=$minc max767=$maxc)"
   pass=$((pass + 1))
